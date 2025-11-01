@@ -109,6 +109,48 @@ body{
     background-color: green;
 }
 
+/* about section*/
+ .about {
+      max-width: 900px;
+      margin: 50px auto;
+      background: white;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .about h1 {
+      color: #00b894;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .about h2 {
+      color: #333;
+      margin-top: 25px;
+      margin-bottom: 10px;
+    }
+
+    .about p {
+      line-height: 1.7;
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+
+    .about ul {
+      margin-left: 20px;
+      list-style-type: disc;
+    }
+
+    footer {
+      margin-top: auto;
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+    }
+
 @media screen and (max-width: 714px){
     .navbar{
         padding: 0px ;
@@ -126,5 +168,70 @@ body{
     .userInput{
         display: none;
     }
+}
+
+/*bar open when click it*/
+
+#bar {
+  display: none;
+  font-size: 25px;
+  cursor: pointer;
+  margin-right: 20px;
+  transition: transform 0.3s ease;
+}
+
+/* Rotate slightly when clicked */
+#bar.active {
+  transform: rotate(90deg);
+}
+
+/* 🔹 Responsive navbar for small screens */
+@media screen and (max-width: 350px) {
+  #bar {
+    display: block;
+  }
+
+  /* Hide by default */
+  .userInput {
+    display: none;
+    position: absolute;
+    top: 63px;
+    right: 0;
+    width: 50vw;
+    height: 30vh;
+    background: linear-gradient(90deg, #26ad5a, #22c55e);
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 20px;
+    box-shadow: -2px 4px 10px rgba(0, 0, 0, 0.2);
+    border-bottom-left-radius: 10px;
+    transition: all 0.3s ease;
+  }
+
+  /* Show when toggled */
+  .userInput.show {
+    display: flex;
+  }
+
+  /* Style links inside menu */
+  .userInput a {
+    display: block;
+    width: 80%;
+    text-align: center;
+    margin: 8px 0;
+    padding: 10px 0;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
     
+    transition: background 0.3s, color 0.3s;
+  }
+
+  /* Hover effect for links */
+  .userInput a:hover {
+    background: #066129;
+    color: white;
+  }
 }

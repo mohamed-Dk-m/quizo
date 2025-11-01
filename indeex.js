@@ -20,8 +20,8 @@ const questions = [
   {
     "question": "في أي مدينة وُلِد النبي محمد ﷺ؟",
     "answers": [
-      { "text": "مكة المكرمة", "correct": true },
       { "text": "المدينة المنورة", "correct": false },
+      { "text": "مكة المكرمة", "correct": true },
       { "text": "القدس", "correct": false },
       { "text": "الطائف", "correct": false }
     ]
@@ -187,3 +187,6 @@ function showResult() {
         title.textContent = "Chose the right answer!"
       });
 showQuestion();
+
+
+
