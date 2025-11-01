@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>quiz web app</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+   body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+    background:#f9fafb;
+}
+*{
+    box-sizing: border-box;
+}
+.sections{
+    display: flex;
+    flex-direction: column;
+}
+.navbar {
+    width: 100%;
+    padding: 0px 50px;
+    background: linear-gradient(90deg, #166534, #22c55e);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    color: rgb(0, 0, 0);
+    display: flex;
+    position: fixed;
+    top: 0; 
+    left: 0;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    z-index: 1;
+}
+
+.logo {
+    padding-left: 4vw;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+.logo h1{
+    font-size: 35px;
+    font-weight: 900;
+    margin: 8px 0;
+}
+.userInput{
+    padding: 3px 35px;
+}
+.userInput a {
+    font-size: 1em;
+    padding-right: 3vw;
+    margin: 0;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    
+}
+
+.userInput a:hover{
+    color: rgb(214, 212, 212);
+}
+
+.mainPage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    padding-top: 70px; 
+}
+.card {
+    background:  #f0fdf4 ;
+    border-radius: 5px;
+    box-shadow: 2px 2px 20px 4px rgba(0, 0, 0, 0.647); 
+    font-size: 18px;
+}
+#questions{
+    text-align: center;
+    width: 100%;
+    padding: 0 10px;
+}
+
+.answers{
+    display: flex;
+    flex-direction: column;
+  align-items: center;
+  padding-bottom: 20px;
+  margin: 0 10px;
+}
+
+.answers button{
+    margin: 0.5em 1em;
+    
+    border: none;
+    color: #000000;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 18px;
+    width: 80%;
+    max-width: 200px;
+    text-align: center;
+}
+.answers button:hover{
+    background-color: rgb(224, 214, 163);
+}
+
+#playAgain{
+    display: none;
+    background-color: green;
+}
+
+    /* About Section */
+    .about {
+      max-width: 900px;
+      margin: 50px auto;
+      background: white;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .about h1 {
+      color: #00b894;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .about h2 {
+      color: #333;
+      margin-top: 25px;
+      margin-bottom: 10px;
+    }
+
+    .about p {
+      line-height: 1.7;
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+
+    .about ul {
+      margin-left: 20px;
+      list-style-type: disc;
+    }
+
+    footer {
+      margin-top: auto;
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+    }
+    @media screen and (max-width: 714px){
+    .navbar{
+        padding: 0px ;
+    }
+}
+@media  screen and (max-width: 425px) {
+    .navbar .logo{
+        padding-left: 2vw;
+    }
+    .userInput{
+        padding: 3px 3px;
+    }
+}
+  </style>
+</head>
+<body>
+
+  <div class="navbar">
+    <div class="logo">
+      <h1>Quizo</h1>
+    </div>
+    <div class="userInput">
+      <a href="home.html">HOME</a>
+      <a href="#" onclick="location.reload()">RELOAD</a>
+      <a href="about.html">ABOUT</a>
+    </div>
+  </div>
+
+  <div class="about">
+    <h1>About Quizo</h1>
+    <p>Welcome to <strong>Quizo</strong> — an islamic quiz platform designed to test your knowledge on various islamic topics!</p>
+
+    <h2>Our Mission</h2>
+    <p>We aim to make learning enjoyable by offering quizzes that challenge your mind while helping you learn something you dont know about islam</p>
+
+    <h2>Topics We Cover</h2>
+    <ul>
+      <li>Islamic knowledge</li>
+      
+    </ul>
+
+    <h2>Who We Are</h2>
+    <p><strong>Quizo</strong> was created by <strong>Dhyaa</strong>, a web developer passionate about technology, learning, and creativity. This site is built to make islamic culture exciting for everyone.</p>
+
+    <h2>Contact Us</h2>
+    <p>If you have suggestions or feedback, feel free to reach out through our contact on social media.</p>
+  </div>
+
+  <footer>
+    &copy; 2025 Quizo. All rights reserved.
+  </footer>
+
+</body>
+</html>

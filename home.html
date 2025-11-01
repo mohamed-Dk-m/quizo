@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quiz web app </title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <section class="sections">
+        <div class="navbar">
+            <div class="logo">
+                <h1>Quizo</h1>
+            </div>
+            
+            <div class="userInput">
+                <a href="home.html">HOME</a>
+                <a href="#" onclick="location.reload()">RELOAD</a>
+                <a href="about.html">ABOUT</a>
+            </div>
+                <i id="bar" class="fa-solid fa-bars" style="color: #000000; display: none;" ></i>
+        </div>
+
+
+        <div class="mainPage">
+            <h2 id="title" style="font-family: Lucida Sans Unicode, Lucida Grande, sans-serif;">Chose the right answer!</h2><br>
+            <div class="card">
+                <h1 id="questions"></h1>
+                
+            
+                <div class="answers">
+                    <button id="answer1"></button>
+                    <button id="answer2"></button>
+                    <button id="answer3"></button>
+                    <button id="answer4"></button>
+                    <button id="playAgain" >Play Again!</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <script src="indeex.js"></script>
+</body>
+</html>
