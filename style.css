@@ -165,7 +165,7 @@ body{
         padding: 3px 3px;
     }
 }
-@media screen and (max-width: 375px){
+@media screen and (max-width: 400px){
     .userInput{
         display: none;
     }
@@ -187,7 +187,7 @@ body{
 }
 
 /* 🔹 Responsive navbar for small screens */
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 400px) {
   #bar {
     display: block;
   }
